@@ -4,16 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id = "@+id/mainback"
+    android:background="@drawable/homepage"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
+
     <TextView
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/header"
-        android:text="@string/_2048_game"
+        android:text="HELP GOKU TO BECOME STRONGER"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:visibility="invisible"
+        app:fontFamily="sans-serif-condensed"
         app:layout_constraintBottom_toBottomOf="@id/grid1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--TextView
+        android:id="@+id/winheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="100px"
+        android:width="100px"
+        android:
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/grid1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header" /-->
+
+    <ImageView
+        android:id="@+id/winheader"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +54,9 @@
         android:id="@+id/grid1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/grid5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="@id/grid2"
@@ -32,27 +66,33 @@
         android:id="@+id/grid2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/grid6"
         app:layout_constraintLeft_toLeftOf="@id/grid1"
         app:layout_constraintRight_toRightOf="@id/grid3"
         app:layout_constraintTop_toTopOf="@id/header" />
 
     <TextView
+        android:id="@+id/grid3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid3"
-        android:text="2"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/grid7"
         app:layout_constraintLeft_toLeftOf="@id/grid2"
         app:layout_constraintRight_toRightOf="@id/grid4"
         app:layout_constraintTop_toTopOf="@id/header" />
 
     <TextView
+        android:id="@+id/grid4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid4"
-        android:text="2"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/grid8"
         app:layout_constraintLeft_toLeftOf="@id/grid3"
         app:layout_constraintRight_toRightOf="parent"
@@ -60,40 +100,48 @@
 
 
     <TextView
+        android:id="@+id/grid5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid5"
-        android:text="2"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/grid9"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="@id/grid6"
         app:layout_constraintTop_toTopOf="@id/grid1" />
 
     <TextView
+        android:id="@+id/grid6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid6"
-        android:text="2"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/grid10"
         app:layout_constraintLeft_toLeftOf="@id/grid5"
         app:layout_constraintRight_toRightOf="@id/grid7"
         app:layout_constraintTop_toTopOf="@id/grid2" />
 
     <TextView
+        android:id="@+id/grid7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid7"
-        android:text="2"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/grid11"
         app:layout_constraintLeft_toLeftOf="@id/grid6"
         app:layout_constraintRight_toRightOf="@id/grid8"
         app:layout_constraintTop_toTopOf="@id/grid3" />
 
     <TextView
+        android:id="@+id/grid8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid8"
-        android:text="2"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/grid12"
         app:layout_constraintLeft_toLeftOf="@id/grid7"
         app:layout_constraintRight_toRightOf="parent"
@@ -101,40 +149,48 @@
 
 
     <TextView
+        android:id="@+id/grid9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid9"
-        android:text="2"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/grid13"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="@id/grid10"
         app:layout_constraintTop_toTopOf="@id/grid5" />
 
     <TextView
+        android:id="@+id/grid10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid10"
-        android:text="2"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/grid14"
         app:layout_constraintLeft_toLeftOf="@id/grid9"
         app:layout_constraintRight_toRightOf="@id/grid11"
         app:layout_constraintTop_toTopOf="@id/grid6" />
 
     <TextView
+        android:id="@+id/grid11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid11"
-        android:text="2"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/grid15"
         app:layout_constraintLeft_toLeftOf="@id/grid10"
         app:layout_constraintRight_toRightOf="@id/grid12"
         app:layout_constraintTop_toTopOf="@id/grid7" />
 
     <TextView
+        android:id="@+id/grid12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid12"
-        android:text="2"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/grid16"
         app:layout_constraintLeft_toLeftOf="@id/grid11"
         app:layout_constraintRight_toRightOf="parent"
@@ -142,89 +198,83 @@
 
 
     <TextView
+        android:id="@+id/grid13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid13"
-        android:text="2"
-        app:layout_constraintBottom_toBottomOf="@id/button"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="@id/grid14"
         app:layout_constraintTop_toTopOf="@id/grid9" />
 
     <TextView
+        android:id="@+id/grid14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid14"
-        android:text="2"
-        app:layout_constraintBottom_toBottomOf="@id/button"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/grid13"
         app:layout_constraintRight_toRightOf="@id/grid15"
         app:layout_constraintTop_toTopOf="@id/grid10" />
 
     <TextView
+        android:id="@+id/grid15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid15"
-        android:text="2"
-        app:layout_constraintBottom_toBottomOf="@id/button"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/grid14"
         app:layout_constraintRight_toRightOf="@id/grid16"
         app:layout_constraintTop_toTopOf="@id/grid11" />
 
     <TextView
+        android:id="@+id/grid16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/grid16"
-        android:text="2"
-        app:layout_constraintBottom_toBottomOf="@id/button"
+        android:background="@drawable/back2"
+        android:text=""
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/grid15"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/grid12" />
 
+
     <Button
         android:id="@+id/button"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UP"
-        app:layout_constraintBottom_toBottomOf="@id/button1"
+        android:layout_marginTop="60dp"
+        android:text="RESTART"
+        android:textSize="50px"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/grid15"
-        />
+        app:layout_constraintTop_toTopOf="@id/grid16" />
 
     <Button
         android:id="@+id/button1"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="left"
-        app:layout_constraintBottom_toBottomOf="@id/button3"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="@id/button2"
-        app:layout_constraintTop_toTopOf="@id/button"
-        />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="right"
-        app:layout_constraintBottom_toBottomOf="@id/button3"
-        app:layout_constraintLeft_toLeftOf="@id/button1"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/button"
-        />
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="down"
+        android:layout_marginTop="60dp"
+        android:text="START"
+        android:textSize="50px"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/button2"
-        />
-
-
-
+        app:layout_constraintTop_toTopOf="@id/grid16" />
 
 </android.support.constraint.ConstraintLayout>
