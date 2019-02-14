@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     int display_arr [][] = new int[4][4];
     int complete_2048 = 0;
     int image_mode = 1;
-    int set_win_at = 16;
+    int set_win_at = 64;
     int top = 1,left = 1, right = 1, down = 1;
 
     @Override
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView grid15 = findViewById(R.id.grid15);
         final TextView grid16 = findViewById(R.id.grid16);
         final TextView header = findViewById(R.id.header);
+        final TextView header2 = findViewById(R.id.header2);
         if(image_mode == 1) {
             grid2.setBackgroundResource(R.drawable.img2);
             grid3.setBackgroundResource(R.drawable.img2);
@@ -77,6 +79,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(activity);
             }
         });
+
+
+        ObjectAnimator movetopdown = ObjectAnimator.ofFloat(header2,"translationY",800);
+        movetopdown.setDuration(15000);
+        movetopdown.start();
 
         final Button button1 = findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -101,10 +108,14 @@ public class MainActivity extends AppCompatActivity {
                 grid15.setVisibility(View.VISIBLE);
                 grid16.setVisibility(View.VISIBLE);
                 header.setVisibility(View.VISIBLE);
+                header2.setVisibility(View.INVISIBLE);
                 button1.setVisibility(View.INVISIBLE);
 
             }
         });
+
+
+
     }
 
     public int check_game_over(int [] checkarr, String side){

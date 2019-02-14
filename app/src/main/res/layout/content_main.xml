@@ -27,6 +27,21 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <TextView
+        android:id="@+id/header2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fight is with Frieza Play game and help goku to become stronger and win the fight"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:lineSpacingExtra = "30dp"
+        app:layout_constraintBottom_toBottomOf="@id/grid1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <!--TextView
         android:id="@+id/winheader"
         android:layout_width="wrap_content"
